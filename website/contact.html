@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Delaware Inc.</title>
+  <meta name="description" content="Get in touch with Delaware Inc. Book a free consultation or send us a message." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar scrolled">
+  <div class="container">
+    <a href="index.html" class="logo" style="color:var(--color-primary)">Dela<span>Ware</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html" class="btn btn-accent active">Get Started</a></li>
+    </ul>
+    <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="contact-hero">
+  <div class="container">
+    <span class="badge" style="background:rgba(232,160,32,.2);color:var(--color-accent)">Get In Touch</span>
+    <h1>Let's Start a Conversation</h1>
+    <p>Tell us about your project and we'll get back to you within one business day — usually sooner.</p>
+  </div>
+</section>
+
+<!-- Contact body -->
+<section class="section contact-body">
+  <div class="container">
+    <div class="contact-info fade-in">
+      <h2>We'd Love to Hear From You</h2>
+      <p>Whether you have a clear brief or just a vague idea, reach out. We help clients clarify their thinking as much as we help them execute it.</p>
+      <div class="contact-item">
+        <div class="contact-item-icon">📧</div>
+        <div>
+          <h4>Email</h4>
+          <p><a href="mailto:hello@delaware.inc">hello@delaware.inc</a></p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">📞</div>
+        <div>
+          <h4>Phone</h4>
+          <p><a href="tel:+13025550199">+1 (302) 555-0199</a></p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">📍</div>
+        <div>
+          <h4>Office</h4>
+          <p>1209 Orange Street, Wilmington, DE 19801</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">🕐</div>
+        <div>
+          <h4>Hours</h4>
+          <p>Monday – Friday, 9am – 6pm ET</p>
+        </div>
+      </div>
+
+      <div style="margin-top:36px;padding:24px;background:var(--color-light);border-radius:var(--radius)">
+        <h4 style="font-size:.875rem;text-transform:uppercase;letter-spacing:.06em;color:var(--color-muted);margin-bottom:12px">What Happens Next</h4>
+        <ol style="padding-left:18px;display:flex;flex-direction:column;gap:10px">
+          <li style="color:var(--color-text);font-size:.9rem">We review your message within 1 business day</li>
+          <li style="color:var(--color-text);font-size:.9rem">A senior team member reaches out to schedule a discovery call</li>
+          <li style="color:var(--color-text);font-size:.9rem">We send a proposal within 3–5 business days of the call</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="contact-form-card fade-in">
+      <h3 style="margin-bottom:8px">Send Us a Message</h3>
+      <p style="font-size:.875rem;margin-bottom:28px">Fill in the form and we'll get back to you promptly.</p>
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Work Email *</label>
+          <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+        </div>
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" placeholder="Acme Corp" />
+        </div>
+        <div class="form-group">
+          <label for="service">Service You're Interested In</label>
+          <select id="service" name="service">
+            <option value="">— Select a service —</option>
+            <option>Digital Strategy</option>
+            <option>Web Development</option>
+            <option>Growth Marketing</option>
+            <option>AI & Automation</option>
+            <option>IT & Security</option>
+            <option>Business Consulting</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="budget">Approximate Budget</label>
+          <select id="budget" name="budget">
+            <option value="">— Select a range —</option>
+            <option>Under $5,000</option>
+            <option>$5,000 – $15,000</option>
+            <option>$15,000 – $50,000</option>
+            <option>$50,000+</option>
+            <option>Prefer to discuss</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Tell Us About Your Project *</label>
+          <textarea id="message" name="message" placeholder="What are you trying to accomplish? What's the timeline? Any context that helps us understand the scope..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px">Send Message →</button>
+        <div id="formSuccess" class="form-success">
+          ✅ Message sent! We'll be in touch within one business day.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--color-light)">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="badge">FAQ</span>
+      <h2>Common Questions</h2>
+    </div>
+    <div style="max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:20px">
+      <details style="background:#fff;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)" class="fade-in">
+        <summary style="font-weight:600;cursor:pointer;color:var(--color-dark)">How quickly can you start?</summary>
+        <p style="margin-top:14px">Typically within 1–2 weeks of a signed agreement. For urgent projects, we can often start sooner.</p>
+      </details>
+      <details style="background:#fff;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)" class="fade-in">
+        <summary style="font-weight:600;cursor:pointer;color:var(--color-dark)">Do you work with early-stage startups?</summary>
+        <p style="margin-top:14px">Yes. We work with companies at every stage, from pre-revenue to Series C. We adjust our approach to what makes sense for your stage.</p>
+      </details>
+      <details style="background:#fff;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)" class="fade-in">
+        <summary style="font-weight:600;cursor:pointer;color:var(--color-dark)">What industries do you specialize in?</summary>
+        <p style="margin-top:14px">We've worked across 45+ industries. Our methodology transfers well, and we bring relevant case studies to every engagement regardless of vertical.</p>
+      </details>
+      <details style="background:#fff;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)" class="fade-in">
+        <summary style="font-weight:600;cursor:pointer;color:var(--color-dark)">What does a typical engagement look like?</summary>
+        <p style="margin-top:14px">Most projects start with a discovery phase (1–2 weeks), move into an execution phase (4–12 weeks depending on scope), then transition to a support or retainer arrangement if needed.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Dela<span>Ware</span></a>
+        <p>Helping businesses grow with strategy, technology, and consulting that actually works.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Digital Strategy</a></li>
+          <li><a href="services.html">Web Development</a></li>
+          <li><a href="services.html">Growth Marketing</a></li>
+          <li><a href="services.html">AI & Automation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@delaware.inc">hello@delaware.inc</a></li>
+          <li><a href="tel:+13025550199">+1 (302) 555-0199</a></li>
+          <li><a href="contact.html">Get a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Delaware Inc. All rights reserved.</span>
+      <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
