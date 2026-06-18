@@ -1,6 +1,8 @@
-import { Routes, Route, Link, useLocation } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import { useAuth } from '@/providers/AuthProvider'
 import { Button } from '@/components/ui/Button'
+import { StudentProgrammes } from './student/StudentProgrammes'
+import { StudentPayments } from './student/StudentPayments'
 
 function StudentDashboard() {
   const { user, signOut } = useAuth()
@@ -92,9 +94,9 @@ export function StudentPortal() {
 
       <Routes>
         <Route path="/" element={<StudentDashboard />} />
-        <Route path="/programmes" element={<StudentSubPage title="My Programmes" />} />
+        <Route path="/programmes" element={<StudentProgrammes />} />
         <Route path="/library" element={<StudentSubPage title="Learning Library" />} />
-        <Route path="/payments" element={<StudentSubPage title="Payments" />} />
+        <Route path="/payments" element={<StudentPayments />} />
         <Route path="/uploads" element={<StudentSubPage title="My Uploads" />} />
         <Route path="/projects" element={<StudentSubPage title="Projects" />} />
         <Route path="/certificates" element={<StudentSubPage title="Certificates" />} />
