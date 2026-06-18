@@ -26,13 +26,14 @@ export function StudentPayments() {
   }, [user])
 
   const loadData = async () => {
+    if (!user) return
     setLoading(true)
 
     const [enrollRes, payRes] = await Promise.all([
       supabase
         .from('programme_enrollments')
         .select('*, programmes(*)')
-        .eq('student_id', user?.id),
+        .eq('student_id', user.id),
       supabase
         .from('programme_payments')
         .select('*, programme_enrollments(*, programmes(*))')
@@ -42,7 +43,7 @@ export function StudentPayments() {
             await supabase
               .from('programme_enrollments')
               .select('id')
-              .eq('student_id', user?.id)
+              .eq('student_id', user.id)
           ).data?.map((e) => e.id) || []
         )
         .order('created_at', { ascending: false }),

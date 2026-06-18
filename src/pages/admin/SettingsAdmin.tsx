@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '@/lib/supabase'
-import { Button } from '@/components/ui/Button'
 import { Form, FormField, Input, TextArea } from '@/components/Forms'
 import type { Database } from '@/types/database'
 
@@ -27,7 +26,8 @@ export function SettingsAdmin() {
     if (!settings) return
 
     setSaving(true)
-    await supabase.from('admin_settings').update(settings).eq('id', settings.id)
+    const { id, updated_at, ...updatePayload } = settings
+    await supabase.from('admin_settings').update(updatePayload).eq('id', id)
     setSaving(false)
   }
 

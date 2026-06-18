@@ -80,8 +80,6 @@ function StudentSubPage({ title }: { title: string }) {
 }
 
 export function StudentPortal() {
-  const location = useLocation()
-
   return (
     <div className="min-h-screen bg-brand-light">
       <header className="bg-white border-b border-gray-200">

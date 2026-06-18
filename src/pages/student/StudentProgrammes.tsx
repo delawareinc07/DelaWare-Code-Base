@@ -23,6 +23,7 @@ export function StudentProgrammes() {
   }, [user])
 
   const loadData = async () => {
+    if (!user) return
     setLoading(true)
 
     const [allRes, enrolledRes] = await Promise.all([
@@ -30,7 +31,7 @@ export function StudentProgrammes() {
       supabase
         .from('programme_enrollments')
         .select('*, programmes(*)')
-        .eq('student_id', user?.id),
+        .eq('student_id', user.id),
     ])
 
     if (allRes.data) setAllProgrammes(allRes.data)

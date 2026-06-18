@@ -87,7 +87,7 @@ export function Gallery() {
                   {item.media_type.startsWith('image') ? (
                     <img
                       src={item.media_url}
-                      alt={item.title}
+                      alt={item.title ?? ''}
                       className="w-full h-48 object-cover"
                     />
                   ) : (
