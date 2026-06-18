@@ -1,6 +1,11 @@
 import { Routes, Route, Link } from 'react-router-dom'
 import { useAuth } from '@/providers/AuthProvider'
 import { Button } from '@/components/ui/Button'
+import { ProgrammesAdmin } from './ProgrammesAdmin'
+import { ProductsAdmin } from './ProductsAdmin'
+import { DeliveryAdmin } from './DeliveryAdmin'
+import { TestimonialsAdmin } from './TestimonialsAdmin'
+import { SettingsAdmin } from './SettingsAdmin'
 
 function AdminHome() {
   const { user, signOut } = useAuth()
@@ -156,16 +161,16 @@ export function AdminDashboard() {
         <Route path="/" element={<AdminHome />} />
         <Route path="/students" element={<AdminSubPage title="Student Management" />} />
         <Route path="/teachers" element={<AdminSubPage title="Teacher Management" />} />
-        <Route path="/programmes" element={<AdminSubPage title="Programmes" />} />
+        <Route path="/programmes" element={<ProgrammesAdmin />} />
         <Route path="/payments" element={<AdminSubPage title="Payment Management" />} />
         <Route path="/content" element={<AdminSubPage title="Training Content" />} />
         <Route path="/orders" element={<AdminSubPage title="Orders" />} />
-        <Route path="/products" element={<AdminSubPage title="Products" />} />
-        <Route path="/delivery" element={<AdminSubPage title="Delivery Cities" />} />
+        <Route path="/products" element={<ProductsAdmin />} />
+        <Route path="/delivery" element={<DeliveryAdmin />} />
         <Route path="/gallery" element={<AdminSubPage title="Gallery" />} />
-        <Route path="/testimonials" element={<AdminSubPage title="Testimonials" />} />
+        <Route path="/testimonials" element={<TestimonialsAdmin />} />
         <Route path="/certificates" element={<AdminSubPage title="Certificates" />} />
-        <Route path="/settings" element={<AdminSubPage title="Settings" />} />
+        <Route path="/settings" element={<SettingsAdmin />} />
       </Routes>
     </div>
   )
