@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Pabblyn brand: Navy Blue + Gold */
+:root {
+  --color-brand: #001f3f; /* Navy Blue */
+  --color-gold: #ffd700; /* Gold */
+  --color-dark: #0c1b33; /* Darker Navy */
+  --color-light: #f5f5f5; /* Off-white */
+  --color-surface: #ffffff;
+  --color-muted: #666666;
+  --radius-brand: 12px;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--color-ink);
+  background: var(--color-surface);
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+
+/* Body copy is left aligned across all Delaware work. */
+p,
+li {
+  text-align: left;
+}
+
+/* Naira amounts: DejaVu Sans carries the ₦ glyph reliably as a fallback. */
+.naira {
+  font-family: Inter, 'DejaVu Sans', system-ui, sans-serif;
+}
+
+/* Respect users who ask for less motion. */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
